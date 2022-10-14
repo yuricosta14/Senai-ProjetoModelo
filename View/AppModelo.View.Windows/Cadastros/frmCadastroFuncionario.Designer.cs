@@ -110,7 +110,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtNome.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtNome.Location = new System.Drawing.Point(107, 133);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(217, 27);
@@ -417,6 +417,7 @@
             this.btnPesquisarCep.TabIndex = 38;
             this.btnPesquisarCep.Text = "Pesquisar";
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // frmCadastroFuncionario
             // 

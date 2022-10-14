@@ -26,7 +26,7 @@ namespace AppModelo.View.Windows.Helpers
                             {
                                 if (box.Tag == "Obrigatorio")
                                 {
-                                    box.BackColor = Color.LightGoldenrodYellow;
+                                    box.BackColor = Color.Aquamarine;
                                 }
                                 break;
                             }
@@ -38,14 +38,6 @@ namespace AppModelo.View.Windows.Helpers
                                 }
                                 break;
                             }
-                        default:
-                            func(control.Controls);
-                            break;
-
-                    }
-
-                    switch (control)
-                    {
                         case ComboBox box:
                             {
                                 if (box.Tag == "Obrigatorio")
@@ -54,21 +46,15 @@ namespace AppModelo.View.Windows.Helpers
                                 }
                                 break;
                             }
+
                         default:
                             func(control.Controls);
                             break;
-
                     }
-                };
 
-            
+                }
             };
             func(frm.Controls);
-
-
-
         }
     }
 }
-
-
