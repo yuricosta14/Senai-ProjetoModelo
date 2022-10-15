@@ -26,7 +26,7 @@ namespace AppModelo.View.Windows.Helpers
                             {
                                 if (box.Tag == "Obrigatorio")
                                 {
-                                    box.BackColor = Color.Aquamarine;
+                                    box.BackColor = Color.Gold;
                                 }
                                 break;
                             }
@@ -34,7 +34,7 @@ namespace AppModelo.View.Windows.Helpers
                             {
                                 if (box.Tag == "Obrigatorio")
                                 {
-                                    box.BackColor = Color.LightGoldenrodYellow;
+                                    box.BackColor = Color.Gold;
                                 }
                                 break;
                             }
@@ -42,7 +42,7 @@ namespace AppModelo.View.Windows.Helpers
                             {
                                 if (box.Tag == "Obrigatorio")
                                 {
-                                    box.BackColor = Color.LightGoldenrodYellow;
+                                    box.BackColor = Color.Gold;
                                 }
                                 break;
                             }
