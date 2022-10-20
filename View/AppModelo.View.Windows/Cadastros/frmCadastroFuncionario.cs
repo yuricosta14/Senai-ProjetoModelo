@@ -1,26 +1,24 @@
-﻿using AppModelo.Controller.External;
+﻿using AppModelo.Controller.Cadastros;
+using AppModelo.Controller.External;
 using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmCadastroFuncionario : Form
     {
+        private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
+
         public frmCadastroFuncionario()
         {
             InitializeComponent();
 
             Componentes.FormatarCamposObrigatorios(this);
+            cbmNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
+            cbmNacionalidade.DisplayMember = "Descricao";
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)

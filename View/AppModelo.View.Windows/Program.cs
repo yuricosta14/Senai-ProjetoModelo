@@ -1,8 +1,5 @@
 ﻿using AppModelo.View.Windows.Cadastros;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows
@@ -19,5 +16,5 @@ namespace AppModelo.View.Windows
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmCadastroFuncionario());
         }
-    }
+    } 
 }
