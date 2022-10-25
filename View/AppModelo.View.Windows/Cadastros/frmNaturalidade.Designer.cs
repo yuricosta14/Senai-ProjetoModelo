@@ -38,7 +38,7 @@
             // lblDiga
             // 
             this.lblDiga.AutoSize = true;
-            this.lblDiga.Location = new System.Drawing.Point(124, 66);
+            this.lblDiga.Location = new System.Drawing.Point(129, 57);
             this.lblDiga.Name = "lblDiga";
             this.lblDiga.Size = new System.Drawing.Size(388, 13);
             this.lblDiga.TabIndex = 0;
@@ -46,10 +46,11 @@
             // 
             // txtCadastrar
             // 
-            this.txtCadastrar.Location = new System.Drawing.Point(184, 91);
+            this.txtCadastrar.Location = new System.Drawing.Point(188, 106);
             this.txtCadastrar.Name = "txtCadastrar";
             this.txtCadastrar.Size = new System.Drawing.Size(251, 20);
             this.txtCadastrar.TabIndex = 1;
+            this.txtCadastrar.TextChanged += new System.EventHandler(this.txtCadastrar_TextChanged);
             // 
             // gvNaturalidade
             // 
@@ -61,9 +62,9 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(274, 127);
+            this.btnSalvar.Location = new System.Drawing.Point(504, 394);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(86, 23);
             this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -73,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 421);
+            this.ClientSize = new System.Drawing.Size(653, 427);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gvNaturalidade);
             this.Controls.Add(this.txtCadastrar);

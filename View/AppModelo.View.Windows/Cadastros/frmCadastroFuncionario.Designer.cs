@@ -527,4 +527,4 @@
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
     }
-}
+} 

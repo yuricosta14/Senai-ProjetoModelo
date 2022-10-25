@@ -35,5 +35,13 @@ namespace AppModelo.View.Windows.Cadastros
                 MessageBox.Show("Houve um erro ao incluir sua naturalidade");
             }
         }
+
+        private void txtCadastrar_TextChanged(object sender, EventArgs e)
+        {
+            //if(txtCadastrar.Text )   
+            {
+
+            }
+        }
     }
 }

@@ -35,6 +35,24 @@ namespace AppModelo.Model.Infra.Repositories
         {
 
             var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao ASC";
+                        
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
+
+            return resultado;
+
+
+
+        }
+
+        public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
+        {
+
+            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao ASC WHERE ativo = true";
+                       
+
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 
@@ -49,6 +67,18 @@ namespace AppModelo.Model.Infra.Repositories
         public NaturalidadeEntity ObterPorId()
         {
             return new NaturalidadeEntity();
+        }
+
+        public NaturalidadeEntity ObterPorDescricao(string descricao)
+        {
+            var sql = $"SELECT id, descricao FROM naturalidade WER descricao = '{descricao}' ";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.QuerySingleOrDefault<NaturalidadeEntity>(sql);
+
+            return resultado; 
+
         }
 
     }
