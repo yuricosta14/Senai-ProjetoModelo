@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 358);
+            this.ClientSize = new System.Drawing.Size(575, 388);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gvNacionalidades);
             this.Controls.Add(this.txtDescricao);

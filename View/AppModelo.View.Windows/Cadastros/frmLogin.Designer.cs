@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblEsqueciSenha = new System.Windows.Forms.Label();
             this.lblContatoSuporte = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -79,12 +82,12 @@
             this.lblContatoSuporte.TabIndex = 3;
             this.lblContatoSuporte.Text = "Contato ao suporte";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtEmail.Location = new System.Drawing.Point(12, 130);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(322, 20);
+            this.txtEmail.TabIndex = 4;
             // 
             // textBox2
             // 
@@ -103,6 +106,10 @@
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,13 +117,14 @@
             this.ClientSize = new System.Drawing.Size(359, 540);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblContatoSuporte);
             this.Controls.Add(this.lblEsqueciSenha);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblEmail);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,8 +136,9 @@
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblEsqueciSenha;
         private System.Windows.Forms.Label lblContatoSuporte;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

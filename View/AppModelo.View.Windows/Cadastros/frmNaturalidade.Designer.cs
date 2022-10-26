@@ -28,60 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDiga = new System.Windows.Forms.Label();
-            this.txtCadastrar = new System.Windows.Forms.TextBox();
-            this.gvNaturalidade = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.gvNaturalidade = new System.Windows.Forms.DataGridView();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chkStatus = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblDiga
+            // btnSalvar
             // 
-            this.lblDiga.AutoSize = true;
-            this.lblDiga.Location = new System.Drawing.Point(129, 57);
-            this.lblDiga.Name = "lblDiga";
-            this.lblDiga.Size = new System.Drawing.Size(388, 13);
-            this.lblDiga.TabIndex = 0;
-            this.lblDiga.Text = "SE SUA NATURALIDADE AINDA NÃO FOI CADASTRADA NOS DIGA QUAL É";
-            // 
-            // txtCadastrar
-            // 
-            this.txtCadastrar.Location = new System.Drawing.Point(188, 106);
-            this.txtCadastrar.Name = "txtCadastrar";
-            this.txtCadastrar.Size = new System.Drawing.Size(251, 20);
-            this.txtCadastrar.TabIndex = 1;
-            this.txtCadastrar.TextChanged += new System.EventHandler(this.txtCadastrar_TextChanged);
+            this.btnSalvar.Location = new System.Drawing.Point(348, 94);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 11;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // gvNaturalidade
             // 
             this.gvNaturalidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNaturalidade.Location = new System.Drawing.Point(32, 173);
+            this.gvNaturalidade.Location = new System.Drawing.Point(42, 135);
             this.gvNaturalidade.Name = "gvNaturalidade";
-            this.gvNaturalidade.Size = new System.Drawing.Size(573, 215);
-            this.gvNaturalidade.TabIndex = 2;
+            this.gvNaturalidade.Size = new System.Drawing.Size(381, 122);
+            this.gvNaturalidade.TabIndex = 10;
             // 
-            // btnSalvar
+            // txtDescricao
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(504, 394);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(86, 23);
-            this.btnSalvar.TabIndex = 3;
-            this.btnSalvar.Text = "SALVAR";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.txtDescricao.Location = new System.Drawing.Point(42, 97);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(197, 20);
+            this.txtDescricao.TabIndex = 9;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(39, 48);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(55, 20);
+            this.txtId.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(39, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Descrição";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Id";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // chkStatus
+            // 
+            this.chkStatus.AutoSize = true;
+            this.chkStatus.Checked = true;
+            this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkStatus.Location = new System.Drawing.Point(255, 99);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(50, 17);
+            this.chkStatus.TabIndex = 12;
+            this.chkStatus.Text = "Ativo";
+            this.chkStatus.UseVisualStyleBackColor = true;
             // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 427);
+            this.ClientSize = new System.Drawing.Size(478, 278);
+            this.Controls.Add(this.chkStatus);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gvNaturalidade);
-            this.Controls.Add(this.txtCadastrar);
-            this.Controls.Add(this.lblDiga);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "frmNaturalidade";
             this.Text = "frmNaturalidade";
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,9 +130,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDiga;
-        private System.Windows.Forms.TextBox txtCadastrar;
-        private System.Windows.Forms.DataGridView gvNaturalidade;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView gvNaturalidade;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox chkStatus;
     }
 }
