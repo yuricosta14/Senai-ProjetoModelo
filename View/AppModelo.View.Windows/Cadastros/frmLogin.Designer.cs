@@ -34,7 +34,7 @@
             this.lblEsqueciSenha = new System.Windows.Forms.Label();
             this.lblContatoSuporte = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -88,13 +88,15 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(322, 20);
             this.txtEmail.TabIndex = 4;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
-            // textBox2
+            // txtSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(322, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtSenha.Location = new System.Drawing.Point(12, 217);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(322, 20);
+            this.txtSenha.TabIndex = 5;
             // 
             // btnEntrar
             // 
@@ -116,7 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 540);
             this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblContatoSuporte);
             this.Controls.Add(this.lblEsqueciSenha);
@@ -137,7 +139,7 @@
         private System.Windows.Forms.Label lblEsqueciSenha;
         private System.Windows.Forms.Label lblContatoSuporte;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }

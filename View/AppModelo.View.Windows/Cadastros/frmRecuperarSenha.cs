@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppModelo.Model.Domain.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,21 @@ namespace AppModelo.View.Windows.Cadastros
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRecuperarAcesso_Click(object sender, EventArgs e)
+        {
+            var validacaoEmail = Validadores.EmailEValido(txtRecuperacaoSenha.Text);
+
+            if (validacaoEmail is false)
+            {
+                errorProvider1.SetError(txtRecuperacaoSenha,
+                    "E-mail incorreto");
+                txtRecuperacaoSenha.Focus();
+                return;
+
+
+            }
         }
     }
 }
