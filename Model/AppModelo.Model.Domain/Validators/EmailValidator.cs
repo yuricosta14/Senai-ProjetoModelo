@@ -17,5 +17,3 @@ namespace AppModelo.Model.Domain.Validators
         }
     }
 }
-
-

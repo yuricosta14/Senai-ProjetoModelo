@@ -60,10 +60,10 @@
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbFeminino = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.cbmNacionalidade = new System.Windows.Forms.ComboBox();
+            this.cmbNacionalidade = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.cbmNaturalidade = new System.Windows.Forms.ComboBox();
+            this.cmbNaturalidade = new System.Windows.Forms.ComboBox();
             this.txtTelefoneContato = new System.Windows.Forms.MaskedTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtEnderecoCep = new System.Windows.Forms.MaskedTextBox();
@@ -81,7 +81,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(779, 88);
+            this.panel1.Size = new System.Drawing.Size(774, 88);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -113,7 +113,6 @@
             // 
             // txtNome
             // 
-            this.txtNome.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtNome.Location = new System.Drawing.Point(107, 133);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(217, 27);
@@ -144,14 +143,14 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(340, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 20);
+            this.label5.Size = new System.Drawing.Size(130, 20);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Data Nascimento";
+            this.label5.Text = "Data Nascimento*";
             // 
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(625, 133);
-            this.txtCpf.Mask = "000,000,000-00";
+            this.txtCpf.Mask = "000.000.000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(130, 27);
             this.txtCpf.TabIndex = 8;
@@ -183,8 +182,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(217, 27);
             this.txtEmail.TabIndex = 11;
-            this.txtEmail.Tag = "Obrigatorio";
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label7
             // 
@@ -202,7 +199,6 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(130, 27);
             this.txtTelefone.TabIndex = 13;
-            this.txtTelefone.Tag = "Obrigatorio";
             // 
             // label8
             // 
@@ -354,23 +350,23 @@
             this.label16.TabIndex = 30;
             this.label16.Text = "Sexo";
             // 
-            // cbmNacionalidade
+            // cmbNacionalidade
             // 
-            this.cbmNacionalidade.FormattingEnabled = true;
-            this.cbmNacionalidade.Location = new System.Drawing.Point(17, 204);
-            this.cbmNacionalidade.Name = "cbmNacionalidade";
-            this.cbmNacionalidade.Size = new System.Drawing.Size(156, 28);
-            this.cbmNacionalidade.TabIndex = 31;
-            this.cbmNacionalidade.Tag = "Obrigatorio";
+            this.cmbNacionalidade.FormattingEnabled = true;
+            this.cmbNacionalidade.Location = new System.Drawing.Point(17, 204);
+            this.cmbNacionalidade.Name = "cmbNacionalidade";
+            this.cmbNacionalidade.Size = new System.Drawing.Size(156, 28);
+            this.cmbNacionalidade.TabIndex = 31;
+            this.cmbNacionalidade.Tag = "Obrigatorio";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(13, 181);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(106, 20);
+            this.label17.Size = new System.Drawing.Size(112, 20);
             this.label17.TabIndex = 32;
-            this.label17.Text = "Nacionalidade";
+            this.label17.Text = "Nacionalidade*";
             // 
             // label18
             // 
@@ -381,13 +377,13 @@
             this.label18.TabIndex = 34;
             this.label18.Text = "Naturalidade";
             // 
-            // cbmNaturalidade
+            // cmbNaturalidade
             // 
-            this.cbmNaturalidade.FormattingEnabled = true;
-            this.cbmNaturalidade.Location = new System.Drawing.Point(194, 204);
-            this.cbmNaturalidade.Name = "cbmNaturalidade";
-            this.cbmNaturalidade.Size = new System.Drawing.Size(130, 28);
-            this.cbmNaturalidade.TabIndex = 33;
+            this.cmbNaturalidade.FormattingEnabled = true;
+            this.cmbNaturalidade.Location = new System.Drawing.Point(194, 204);
+            this.cmbNaturalidade.Name = "cmbNaturalidade";
+            this.cmbNaturalidade.Size = new System.Drawing.Size(130, 28);
+            this.cmbNaturalidade.TabIndex = 33;
             // 
             // txtTelefoneContato
             // 
@@ -433,15 +429,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 518);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(774, 523);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtEnderecoCep);
             this.Controls.Add(this.txtTelefoneContato);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.cbmNaturalidade);
+            this.Controls.Add(this.cmbNaturalidade);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.cbmNacionalidade);
+            this.Controls.Add(this.cmbNacionalidade);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.rbFeminino);
             this.Controls.Add(this.rbMasculino);
@@ -475,7 +472,9 @@
             this.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCadastroFuncionario";
+            this.Tag = "";
             this.Text = "frmCadastroFuncionario";
+            this.Load += new System.EventHandler(this.frmCadastroFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
@@ -517,14 +516,14 @@
         private System.Windows.Forms.RadioButton rbMasculino;
         private System.Windows.Forms.RadioButton rbFeminino;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox cbmNacionalidade;
+        private System.Windows.Forms.ComboBox cmbNacionalidade;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox cbmNaturalidade;
+        private System.Windows.Forms.ComboBox cmbNaturalidade;
         private System.Windows.Forms.MaskedTextBox txtTelefoneContato;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.MaskedTextBox txtEnderecoCep;
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
     }
-} 
+}

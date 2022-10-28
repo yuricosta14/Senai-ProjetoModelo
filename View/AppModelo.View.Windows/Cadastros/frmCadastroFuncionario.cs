@@ -15,15 +15,17 @@ namespace AppModelo.View.Windows.Cadastros
         public frmCadastroFuncionario()
         {
             InitializeComponent();
-
             Componentes.FormatarCamposObrigatorios(this);
-            cbmNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
-            cbmNacionalidade.DisplayMember = "Descricao";
+            cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
+            cmbNacionalidade.DisplayMember = "Descricao";
+
         }
+
+
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
-            //criou a instancia do Controllador
+            //Crio a instancia do Controllador
             var cepController = new ViaCepController();
 
             //Recebo os dados do metodo obter para o endereço
@@ -37,58 +39,47 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
-            if (txtNome.Text.Length < 6)
+            //primeira regra nome < que 6 letras
+            if(txtNome.Text.Length < 6)
             {
-                errorProvider.SetError(txtNome, "Digite o seu nome completo");
-
+                errorProvider.SetError(txtNome,"Digite seu nome completo");
                 return;
             }
-            else
-            {
-                errorProvider.Clear();
 
-            }
-            
+            //verifica se digitou algum numero
+
+            //SomenteLetras();
+            //VerificarSeExisteNumeroNoTexto();
 
             foreach (var letra in txtNome.Text)
             {
                 if (char.IsNumber(letra))
                 {
-                    errorProvider.SetError(txtNome, "Seu nome deve conter somente letras");
-
+                    errorProvider
+                        .SetError(txtNome, "Seu nome parece estar errado");
                     return;
                 }
-                errorProvider.Clear();  
-
-
-
             }
+            errorProvider.Clear();
+
+           
         }
 
-        public void  txtCpf_Validating(object sender, CancelEventArgs e)
+        private void txtCpf_Validating(object sender, CancelEventArgs e)
         {
             var cpf = txtCpf.Text;
             var cpfEhValido = Validadores.ValidarCPF(cpf);
-
             if(cpfEhValido is false)
             {
-                errorProvider.SetError(txtCpf, "CPF Invalido");
+                errorProvider.SetError(txtCpf, "CPF Inválido");
                 return;
             }
             errorProvider.Clear();
         }
 
-        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        private void frmCadastroFuncionario_Load(object sender, EventArgs e)
         {
-            var email = txtEmail.Text;
-            var emailValido = Validadores.EmailEValido(email);
 
-            if (emailValido is false)
-            {
-                errorProvider.SetError(txtEmail, "Seu email e invalido");
-                return;
-            }
-            errorProvider.Clear();
         }
     }
 }

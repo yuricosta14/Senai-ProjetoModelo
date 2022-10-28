@@ -21,4 +21,3 @@ namespace AppModelo.Controller.Cadastros
         }
     }
 }
-    

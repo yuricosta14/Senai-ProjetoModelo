@@ -1,10 +1,6 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using AppModelo.Model.Infra.Repositories;
 using System.Collections.Generic;
-using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Controller.Cadastros
 {
@@ -13,9 +9,9 @@ namespace AppModelo.Controller.Cadastros
         public bool Cadastrar(string descricao, bool status)
         {
             var repositorio = new NaturalidadeRepository();
-           
+
             var naturalidade = repositorio.ObterPorDescricao(descricao);
-            if(naturalidade !=null) return false;
+            if(naturalidade is not null) return false;
 
             var resposta = repositorio.Inserir(descricao, status);
             return resposta;
@@ -27,5 +23,6 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.ObterTodos();
             return (List<NaturalidadeEntity>)resposta;
         }
+
     }
 }

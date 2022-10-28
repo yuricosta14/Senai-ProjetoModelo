@@ -9,7 +9,7 @@ namespace AppModelo.View.Windows.Helpers
 {
     internal static partial class Componentes
     {
-        internal static bool SomenteLetras(string texto)
+        internal static bool ExisteNumeroNoTexto(string texto)
         {
             foreach (var letra in texto)
             {
@@ -19,7 +19,6 @@ namespace AppModelo.View.Windows.Helpers
                 }
             }
             return false;
-                             
         }
     }
 }

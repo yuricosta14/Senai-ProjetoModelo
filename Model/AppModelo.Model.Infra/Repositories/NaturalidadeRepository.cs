@@ -9,26 +9,22 @@ namespace AppModelo.Model.Infra.Repositories
 {
     public class NaturalidadeRepository
     {
-
         public bool Inserir(string descricao, bool status)
         {
             var agora = DateTime.Now.ToString("u");
-            var sql = $"INSERT INTO naturalidade (descricao, ativo, dataCriacao, dataAlteracao) VALUES  " +
-                $"('{descricao}',{status},'{agora}','{agora}')";
 
+            var sql = $"INSERT INTO naturalidade " +
+                    $"(descricao, dataCriacao, dataAlteracao, ativo) " +
+                    $"VALUES " +
+                    $"('{descricao}','{agora}','{agora}', {status})";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
-
             var resultado = conexaoBd.Execute(sql);
-
             return resultado > 0;
-
         }
-
         public bool Atualizar()
         {
             return false;
         }
-
         public bool Remover()
         {
             return false;
@@ -36,42 +32,28 @@ namespace AppModelo.Model.Infra.Repositories
 
         public IEnumerable<NaturalidadeEntity> ObterTodos()
         {
-
-            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao ASC";
-                        
+            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao DESC";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 
             var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
 
             return resultado;
-
-
-
         }
-
         public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
         {
-
-            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao ASC WHERE ativo = true";
-                       
-
+            var sql = "SELECT id, descricao FROM naturalidade WHERE ativo = true";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 
             var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
 
             return resultado;
-
-
-
         }
-
-        public NaturalidadeEntity ObterPorId()
+        public NacionalidadeEntity ObterPorId()
         {
-            return new NaturalidadeEntity();
+            return new NacionalidadeEntity();
         }
-
         public NaturalidadeEntity ObterPorDescricao(string descricao)
         {
             var sql = $"SELECT id, descricao FROM naturalidade WHERE descricao = '{descricao}' ";
@@ -80,9 +62,7 @@ namespace AppModelo.Model.Infra.Repositories
 
             var resultado = conexaoBd.QuerySingleOrDefault<NaturalidadeEntity>(sql);
 
-            return resultado; 
-
+            return resultado;
         }
-
     }
 }

@@ -121,6 +121,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmNaturalidade";
             this.Text = "frmNaturalidade";
+            this.Load += new System.EventHandler(this.frmNaturalidade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
