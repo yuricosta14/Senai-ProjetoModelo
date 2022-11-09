@@ -69,6 +69,7 @@
             this.txtEnderecoCep = new System.Windows.Forms.MaskedTextBox();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +82,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 88);
+            this.panel1.Size = new System.Drawing.Size(813, 88);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -358,6 +359,7 @@
             this.cmbNacionalidade.Size = new System.Drawing.Size(156, 28);
             this.cmbNacionalidade.TabIndex = 31;
             this.cmbNacionalidade.Tag = "Obrigatorio";
+            this.cmbNacionalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNacionalidade_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -384,6 +386,7 @@
             this.cmbNaturalidade.Name = "cmbNaturalidade";
             this.cmbNaturalidade.Size = new System.Drawing.Size(130, 28);
             this.cmbNaturalidade.TabIndex = 33;
+            this.cmbNaturalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNaturalidade_SelectedIndexChanged);
             // 
             // txtTelefoneContato
             // 
@@ -425,12 +428,23 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(674, 528);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(114, 32);
+            this.btnSalvar.TabIndex = 39;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(774, 523);
+            this.ClientSize = new System.Drawing.Size(813, 573);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtEnderecoCep);
             this.Controls.Add(this.txtTelefoneContato);
@@ -525,5 +539,6 @@
         private System.Windows.Forms.MaskedTextBox txtEnderecoCep;
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

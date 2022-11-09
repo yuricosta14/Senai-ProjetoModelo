@@ -1,8 +1,8 @@
 ﻿using AppModelo.Model.Domain.Entities;
+using Dapper;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Data;
-using Dapper;
 
 namespace AppModelo.Model.Infra.Repositories
 {
