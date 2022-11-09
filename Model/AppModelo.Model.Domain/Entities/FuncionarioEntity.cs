@@ -8,7 +8,7 @@ namespace AppModelo.Model.Domain.Entities
 
         public string Nome { get; set; }
 
-        public DateTime DataNAscimento { get; set; }
+        public DateTime DataNascimento { get; set; }
 
         public bool Sexo { get; set; }
 
