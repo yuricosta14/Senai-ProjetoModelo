@@ -12,12 +12,14 @@ namespace AppModelo.View.Windows.Cadastros
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         private FuncionarioController _funcionarioController = new FuncionarioController();
+        private NaturalidadeController _naturalidadeController = new NaturalidadeController();
         public frmCadastroFuncionario()
         {
             InitializeComponent();
             Componentes.FormatarCamposObrigatorios(this);
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+            cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
 
         }
 
