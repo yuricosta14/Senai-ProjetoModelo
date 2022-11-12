@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmCadastroFuncionario : Form
-    {
+    {   
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         private FuncionarioController _funcionarioController = new FuncionarioController();
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
@@ -19,7 +19,10 @@ namespace AppModelo.View.Windows.Cadastros
             Componentes.FormatarCamposObrigatorios(this);
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+            cmbNacionalidade.ValueMember = "id";
             cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
+            cmbNaturalidade.DisplayMember = "Descricao";
+            cmbNaturalidade.ValueMember = "id";
 
         }
 
@@ -89,13 +92,16 @@ namespace AppModelo.View.Windows.Cadastros
             {
                 var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
                 int numero = int.Parse(txtEnderecoNumero.Text);
-                var idNacionalidade = cmbNacionalidade.SelectedIndex;
-                var idNaturalidade = cmbNaturalidade.SelectedIndex;
+                var idNacionalidade = cmbNacionalidade.SelectedValue;
+                var idNaturalidade = cmbNaturalidade.SelectedValue;
 
-                var salvou = _funcionarioController.Cadastrar( txtNome.Text, dataNascimento, rbMasculino.Checked, txtCpf.Text,
+                int Nacionalidade = Convert.ToInt32(idNacionalidade);
+                int Naturalidade = Convert.ToInt32(idNaturalidade);
+
+                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtCpf.Text,
                     txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text,
                     numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text,
-                    idNacionalidade, idNaturalidade);
+                    Nacionalidade, Naturalidade);
 
                 if (salvou)
                 {
@@ -115,14 +121,14 @@ namespace AppModelo.View.Windows.Cadastros
         {
             var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
             string Index = cmbNacionalidade.Text;
-            MessageBox.Show(Index);
+            //MessageBox.Show(Index);
         }
 
         private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
             string Index = cmbNaturalidade.Text;
-            MessageBox.Show(Index);
+            //MessageBox.Show(Index);
 
         }
 
