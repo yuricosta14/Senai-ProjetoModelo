@@ -29,5 +29,13 @@ namespace AppModelo.View.Windows.Cadastros
 
             }
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            var atualizar = _nacionalidadeController.ObterTodasNacionalidades();
+            gvNacionalidades.DataSource = atualizar;
+
+
+        }
     }
 }

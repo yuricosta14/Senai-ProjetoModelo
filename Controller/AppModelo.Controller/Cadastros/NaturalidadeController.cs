@@ -1,6 +1,7 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using AppModelo.Model.Infra.Repositories;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Channels;
 
 namespace AppModelo.Controller.Cadastros
 {
@@ -23,6 +24,5 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.ObterTodos();
             return (List<NaturalidadeEntity>)resposta;
         }
-
     }
 }
