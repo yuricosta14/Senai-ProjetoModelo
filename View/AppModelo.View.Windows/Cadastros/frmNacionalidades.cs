@@ -22,6 +22,9 @@ namespace AppModelo.View.Windows.Cadastros
             {
                 MessageBox.Show("Nacionalidade incluída com sucesso");
                 txtDescricao.Text = string.Empty;
+
+                var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
+                gvNacionalidades.DataSource = listaDeNacionalidades;
             }
             else
             {
@@ -37,5 +40,23 @@ namespace AppModelo.View.Windows.Cadastros
 
 
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var deletar = _nacionalidadeController.Deletar(txtDescricao.Text);
+            var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
+            gvNacionalidades.DataSource = listaDeNacionalidades;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtId.Text);
+            var editar = _nacionalidadeController.Atualizarr(id, txtDescricao.Text);
+            var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
+            gvNacionalidades.DataSource = listaDeNacionalidades;
+
+
+        }
     }
 }
+
