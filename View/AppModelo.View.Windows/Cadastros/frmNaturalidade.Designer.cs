@@ -37,6 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.chkStatus = new System.Windows.Forms.CheckBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +71,6 @@
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(39, 48);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(55, 20);
@@ -108,11 +110,44 @@
             this.chkStatus.Text = "Ativo";
             this.chkStatus.UseVisualStyleBackColor = true;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(184, 281);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(90, 29);
+            this.btnEditar.TabIndex = 13;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Location = new System.Drawing.Point(280, 281);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(82, 29);
+            this.btnAtualizar.TabIndex = 14;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(368, 281);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(92, 29);
+            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 278);
+            this.ClientSize = new System.Drawing.Size(464, 331);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.chkStatus);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gvNaturalidade);
@@ -140,5 +175,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.CheckBox chkStatus;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

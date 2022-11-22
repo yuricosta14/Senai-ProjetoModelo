@@ -12,7 +12,7 @@ namespace AppModelo.Controller.Cadastros
             var repositorio = new NaturalidadeRepository();
 
             var naturalidade = repositorio.ObterPorDescricao(descricao);
-            if(naturalidade is not null) return false;
+            if (naturalidade is not null) return false;
 
             var resposta = repositorio.Inserir(descricao, status);
             return resposta;
@@ -24,5 +24,23 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.ObterTodos();
             return (List<NaturalidadeEntity>)resposta;
         }
+
+        public bool Deletar(string descricao)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Remover(descricao);
+            return resposta;
+        }
+
+        public bool Atualizarr(int id, string descricao)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Atualizarr(id, descricao);
+            return resposta;
+        }
     }
 }
+   
+
+    
+

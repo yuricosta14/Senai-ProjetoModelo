@@ -6,6 +6,10 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmNaturalidade : Form
     {
+        private NaturalidadeController _naturalidadecontroller = new NaturalidadeController();
+    
+      
+    
         public frmNaturalidade()
         {
             InitializeComponent();
@@ -37,6 +41,27 @@ namespace AppModelo.View.Windows.Cadastros
             var dataSource = controller.ObterTodasNaturalidades();
             gvNaturalidade.DataSource = dataSource;
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtId.Text);
+            var editar = _naturalidadecontroller.Atualizarr(id, txtDescricao.Text);
+            var listaDeNacionalidades = _naturalidadecontroller.ObterTodasNaturalidades();
+            gvNaturalidade.DataSource = listaDeNacionalidades;
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            var atualizar = _naturalidadecontroller.ObterTodasNaturalidades();
+            gvNaturalidade.DataSource = atualizar;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var deletar = _naturalidadecontroller.Deletar(txtDescricao.Text);
+            var listaDeNacionalidades = _naturalidadecontroller.ObterTodasNaturalidades();
+            gvNaturalidade.DataSource = listaDeNacionalidades;
         }
     }
 }
