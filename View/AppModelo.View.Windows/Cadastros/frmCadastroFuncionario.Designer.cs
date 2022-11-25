@@ -70,6 +70,7 @@
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnListagem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +83,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(813, 88);
+            this.panel1.Size = new System.Drawing.Size(856, 88);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -431,7 +432,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(674, 528);
+            this.btnSalvar.Location = new System.Drawing.Point(687, 528);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(114, 32);
             this.btnSalvar.TabIndex = 39;
@@ -439,12 +440,24 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // btnListagem
+            // 
+            this.btnListagem.Location = new System.Drawing.Point(643, 566);
+            this.btnListagem.Name = "btnListagem";
+            this.btnListagem.Size = new System.Drawing.Size(201, 34);
+            this.btnListagem.TabIndex = 40;
+            this.btnListagem.Text = "Listagem de Funcionarios";
+            this.btnListagem.UseVisualStyleBackColor = true;
+            this.btnListagem.Visible = false;
+            this.btnListagem.Click += new System.EventHandler(this.btnConferir_Click);
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 573);
+            this.ClientSize = new System.Drawing.Size(856, 623);
+            this.Controls.Add(this.btnListagem);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtEnderecoCep);
@@ -541,5 +554,6 @@
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnListagem;
     }
 }

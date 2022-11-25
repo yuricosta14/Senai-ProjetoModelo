@@ -38,5 +38,10 @@ namespace AppModelo.View.Windows
             form.MdiParent = this;
             form.Show();
         }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

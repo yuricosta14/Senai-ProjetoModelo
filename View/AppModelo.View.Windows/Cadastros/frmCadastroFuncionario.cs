@@ -24,6 +24,7 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNaturalidade.DisplayMember = "Descricao";
             cmbNaturalidade.ValueMember = "id";
 
+            
         }
 
 
@@ -114,6 +115,8 @@ namespace AppModelo.View.Windows.Cadastros
 
                 limparDados(this);
 
+                btnListagem.Visible = true;
+
             }
         }
 
@@ -194,6 +197,12 @@ namespace AppModelo.View.Windows.Cadastros
                     limparDados(c);
                 }
             }
+        }
+
+        private void btnConferir_Click(object sender, EventArgs e)
+        {
+            var form = new frmListagemFuncionarios();
+            form.Show();
         }
     }
 }

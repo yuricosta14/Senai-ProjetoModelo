@@ -1,5 +1,7 @@
-﻿using Dapper;
+﻿using AppModelo.Model.Domain.Entities;
+using Dapper;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto.Digests;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -25,5 +27,17 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
             }
+
+        public IEnumerable<FuncionarioEntity> ObterTodos()
+        {
+            var sql = " SELECT * FROM funcionarios ";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.Query<FuncionarioEntity>(sql);
+
+            return resultado;
+        }
+
     }
-}
+}   

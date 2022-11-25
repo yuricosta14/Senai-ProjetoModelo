@@ -2,6 +2,9 @@
 using System.Data.SqlClient;
 using System.Data;
 using AppModelo.Model.Infra.Repositories;
+using AppModelo.Model.Domain.Entities;
+using System.Collections.Generic;
+using AppModelo.Model.Infra.Databases;
 
 namespace AppModelo.Controller.Cadastros
 {
@@ -18,10 +21,19 @@ namespace AppModelo.Controller.Cadastros
                 uf, idNacionalidade, idNaturalidade);
 
             return resposta;
+
+
             }
 
-       }
-
+        public List<FuncionarioEntity> ObterTodosFuncionarios()
+        {
+            var repositorio = new FuncionarioRepository();
+            var resposta = repositorio.ObterTodos();
+            return (List<FuncionarioEntity>)resposta;
+        }
 
     }
+
+
+}
 
