@@ -63,5 +63,7 @@ namespace AppModelo.View.Windows.Cadastros
             var listaDeNacionalidades = _naturalidadecontroller.ObterTodasNaturalidades();
             gvNaturalidade.DataSource = listaDeNacionalidades;
         }
+
+        
     }
 }

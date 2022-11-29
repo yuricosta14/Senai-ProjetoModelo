@@ -1,12 +1,5 @@
 ﻿using AppModelo.Controller.Cadastros;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
@@ -23,9 +16,11 @@ namespace AppModelo.View.Windows.Cadastros
             gvListagemFuncionarios.DataSource = listaDeFuncionarios;
         }
 
-        private void gvListagemFuncionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            var deletar = _funcionarioController.Deletar(txtDescricao.Text);
+            var listaDeFuncionarios = _funcionarioController.ObterTodosFuncionarios();
+            gvListagemFuncionarios.DataSource = listaDeFuncionarios;
         }
     }
 }

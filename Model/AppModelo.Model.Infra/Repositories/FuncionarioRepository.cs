@@ -1,13 +1,9 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using Dapper;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Crypto.Digests;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Repositories
 {
@@ -37,6 +33,14 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Query<FuncionarioEntity>(sql);
 
             return resultado;
+        }
+
+        public bool Remover(string nome)
+        {
+            var sql = $"DELETE FROM funcionarios WHERE nome = ('{nome}')";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
         }
 
     }
