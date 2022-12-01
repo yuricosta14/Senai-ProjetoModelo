@@ -17,6 +17,11 @@ namespace AppModelo.View.Windows
 
         }
 
+        /// <summary>
+        /// Ao clicar em cadastros e selcionar nacionalidades ele abre o formulario para poder cadastrar as nacionalidades
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nacionalidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmNacionalidades();
@@ -24,6 +29,11 @@ namespace AppModelo.View.Windows
             form.Show();
         }
 
+        /// <summary>
+        /// Ao clicar em cadastros e selcionar naturalidades ele abre o formulario para poder cadastrar as naturalidades
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void naturalidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmNaturalidade();
@@ -31,7 +41,12 @@ namespace AppModelo.View.Windows
             form.Show();
 
         }
-
+        
+        /// <summary>
+        /// Ao clicar em cadastros e selcionar funcionarios ele abre o formulario para poder cadastrar novos funcionarios
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmCadastroFuncionario();

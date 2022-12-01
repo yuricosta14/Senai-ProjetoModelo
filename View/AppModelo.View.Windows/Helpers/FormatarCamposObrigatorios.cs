@@ -6,7 +6,12 @@ namespace AppModelo.View.Windows.Helpers
 {
     internal static partial class Componentes
     {
-            internal static void FormatarCamposObrigatorios(Form frm)
+        /// <summary>
+        /// Deixa todos os campos desejados de alguma cor de sua escolha, no caso eu optei por LightGoldenrodYellow
+        /// que foi utilizado no formulario casdastro de funcionario
+        /// </summary>
+        /// <param name="frm"></param>
+        internal static void FormatarCamposObrigatorios(Form frm)
             {
                 Action<Control.ControlCollection> func = null;
                 //func é uma função anonima que recebe todos os controles do formulário

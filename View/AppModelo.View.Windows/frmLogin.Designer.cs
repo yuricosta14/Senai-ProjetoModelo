@@ -33,7 +33,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblEqueciSenha = new System.Windows.Forms.Label();
             this.lblSuporteContato = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -82,18 +82,18 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Senha";
             // 
-            // label3
+            // lblEqueciSenha
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(250, 316);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Esqueci minha senha";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblEqueciSenha.AutoSize = true;
+            this.lblEqueciSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEqueciSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEqueciSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblEqueciSenha.Location = new System.Drawing.Point(250, 316);
+            this.lblEqueciSenha.Name = "lblEqueciSenha";
+            this.lblEqueciSenha.Size = new System.Drawing.Size(135, 16);
+            this.lblEqueciSenha.TabIndex = 6;
+            this.lblEqueciSenha.Text = "Esqueci minha senha";
+            this.lblEqueciSenha.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblSuporteContato
             // 
@@ -138,7 +138,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(432, 503);
             this.Controls.Add(this.lblSuporteContato);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblEqueciSenha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -165,7 +165,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEqueciSenha;
         private System.Windows.Forms.Label lblSuporteContato;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.ErrorProvider errorProvider1;

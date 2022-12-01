@@ -1,13 +1,6 @@
 ﻿using AppModelo.Controller.Seguranca;
 using AppModelo.Model.Domain.Validators;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows
@@ -19,13 +12,19 @@ namespace AppModelo.View.Windows
             InitializeComponent();
             
         }
-
+        
+        /// <summary>
+        /// Ao clicar no botão cancelar ele fecha o formulario de recuperar senha e volta para o login 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+        
         /// <summary>
-        /// Ao clicar no botão recuperar senha o email e validado para ver se e um email verdadeiro para assim ele enviar uma mensagem de recuperação de senha
+        /// Ao clicar no botão recuperar senha o email e validado para ver se e um email verdadeiro para assim ele enviar uma mensagem de recuperação de senha no email
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

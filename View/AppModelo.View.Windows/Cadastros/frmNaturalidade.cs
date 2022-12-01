@@ -14,7 +14,13 @@ namespace AppModelo.View.Windows.Cadastros
         {
             InitializeComponent();
         }
-
+        
+        /// <summary>
+        /// Ao clicar no botão salvar ele verifica se tem número no texto se tiver ele vai dar um erro e não irá salvar, 
+        /// se não tiver ele salvara no banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             var temNumero = 
@@ -34,7 +40,12 @@ namespace AppModelo.View.Windows.Cadastros
             var resposta = controller.Cadastrar(descricaoMaiuscula, chkStatus.Checked);
 
         }
-
+        
+        /// <summary>
+        /// Com o metodo ObterTodasNaturalidades ao abrir o formúlario todas as naturalidades cadastradas aparecera no datagridview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmNaturalidade_Load(object sender, EventArgs e)
         {
             var controller = new NaturalidadeController();
@@ -42,7 +53,12 @@ namespace AppModelo.View.Windows.Cadastros
             gvNaturalidade.DataSource = dataSource;
 
         }
-
+        
+        /// <summary>
+        /// Ao clicar no botão de editar ele permitira editar uma naturalidade ja cadastrada no banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEditar_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtId.Text);
@@ -50,13 +66,23 @@ namespace AppModelo.View.Windows.Cadastros
             var listaDeNacionalidades = _naturalidadecontroller.ObterTodasNaturalidades();
             gvNaturalidade.DataSource = listaDeNacionalidades;
         }
-
+        
+        /// <summary>
+        /// Ao clicar no botão de atualizar ele atualiza todas naturalidades cadastradas no banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             var atualizar = _naturalidadecontroller.ObterTodasNaturalidades();
             gvNaturalidade.DataSource = atualizar;
         }
 
+        /// <summary>
+        /// Ao clicar no botão de excluir ele permitira apagar uma naturalidade ja cadastrada no banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             var deletar = _naturalidadecontroller.Deletar(txtDescricao.Text);

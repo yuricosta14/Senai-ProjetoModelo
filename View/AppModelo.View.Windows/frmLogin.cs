@@ -11,7 +11,13 @@ namespace AppModelo.View.Windows
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Ao clicar no botão entrar ele valida se seu email esta corrreto, se não tiver ele vai der um erro que seu email está errado e se estiver 
+        /// ele busca no banco de dados se o email e a senha esta cadastrado para efetuar o login 
+        /// e poder entrar no formulario pincipal, se não tiver cadastrado ele vai dar um erro de usuário ou senha não encontrado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogar_Click(object sender, EventArgs e)
         {
             //1 passo validar o e-mail
@@ -36,7 +42,12 @@ namespace AppModelo.View.Windows
                 MessageBox.Show("Usuário ou senha não encontrado");
             }
         }
-
+        
+        /// <summary>
+        /// Ao clicar no esqueci senha ele abre o formulario de recuperação de senha 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void label3_Click(object sender, EventArgs e)
         {
             var form = new frmRecuperarSenha();

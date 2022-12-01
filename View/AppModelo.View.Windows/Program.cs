@@ -24,7 +24,7 @@ namespace AppModelo.View.Windows
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListagemFuncionarios());
+            Application.Run(new frmLogin());
 
             Environment.Exit(-1);
 
