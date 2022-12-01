@@ -24,7 +24,11 @@ namespace AppModelo.View.Windows
         {
             this.Hide();
         }
-
+        /// <summary>
+        /// Ao clicar no botão recuperar senha o email e validado para ver se e um email verdadeiro para assim ele enviar uma mensagem de recuperação de senha
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
             var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
