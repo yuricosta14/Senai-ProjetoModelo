@@ -8,6 +8,11 @@ namespace AppModelo.Model.Infra.Services
 {
     public class ViaCepService
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cep"></param>
+        /// <returns>Retorna o cep via api</returns>
         public ViaCepWrapper ObterDaApi(string cep)
         {
             //Como o metodo precisa retornar um ViaCepWrapper, é criada uma instancia vazia para retornar ela caso dê erro.

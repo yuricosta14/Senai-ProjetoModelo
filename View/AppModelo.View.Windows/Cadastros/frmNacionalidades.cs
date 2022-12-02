@@ -6,6 +6,9 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmNacionalidades : Form
     {
+        /// <summary>
+        ///Instância da classe controller de nacionalidade
+        /// </summary>
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         
         /// <summary>

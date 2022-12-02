@@ -6,6 +6,12 @@ namespace AppModelo.Controller.Seguranca
 {
     public class UsuarioController
     {
+        /// <summary>
+        /// Responsavel por efetuar o login 
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="senha"></param>
+        /// <returns>Retorna se as informações do login foi encotrado no banco de dados</returns>
         public bool EfetuarLogin(string usuario, string senha)
         {
             var repositorio = new UsuarioRepository();
@@ -20,7 +26,12 @@ namespace AppModelo.Controller.Seguranca
                 return false;
             }
         }
-
+        
+        /// <summary>
+        /// Responsavel pela recuperação da senha via email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>Retorna se o usuario foi encontrado no banco de dados e se foi encontrado uma nova senha e enviada no seu email</returns>
         public string RecuperarSenha(string email)
         {
             //1 PASSO VERIFICAR SE EMAIL É DE UM USUARIO

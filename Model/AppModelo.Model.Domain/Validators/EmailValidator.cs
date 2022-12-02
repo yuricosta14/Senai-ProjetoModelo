@@ -2,6 +2,9 @@
 
 namespace AppModelo.Model.Domain.Validators
 {
+    /// <summary>
+    /// Responsavel por validar email digitado por meio da regex de validação
+    /// </summary>
     public static partial class Validadores
     {
         public static bool EmailEValido(string inputEmail)

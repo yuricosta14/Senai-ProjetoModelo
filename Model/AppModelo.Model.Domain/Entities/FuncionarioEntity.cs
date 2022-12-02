@@ -2,6 +2,9 @@
 
 namespace AppModelo.Model.Domain.Entities
 {
+    /// <summary>
+    /// Responsavel por retornar um valor e atribuir um novo valor nas propriedades
+    /// </summary>
     public class FuncionarioEntity
     {
         public int Id { get; set; }

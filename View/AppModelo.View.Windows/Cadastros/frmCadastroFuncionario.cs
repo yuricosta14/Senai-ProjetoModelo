@@ -7,7 +7,10 @@ using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
-{
+{   
+    /// <summary>
+    ///Instância das classes controllers de nacionalidade, naturalidade e funcionário
+    /// </summary>
     public partial class frmCadastroFuncionario : Form
     {   
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
@@ -28,7 +31,11 @@ namespace AppModelo.View.Windows.Cadastros
         }
 
 
-
+        /// <summary>
+        /// botão para pesquisar o cep digitado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
             //Crio a instancia do Controllador
@@ -42,7 +49,12 @@ namespace AppModelo.View.Windows.Cadastros
             txtEnderecoMunicipio.Text = endereco.Localidade;
             txtEnderecoUf.Text = endereco.Uf;
         }
-
+        
+        /// <summary>
+        /// Validação do nome e verifica se a pessoa digitou algum número no lugar das letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
             //primeira regra nome < que 6 letras
@@ -70,7 +82,11 @@ namespace AppModelo.View.Windows.Cadastros
 
            
         }
-
+        /// <summary>
+        /// Valida se o cpf que foi digitado esta correto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtCpf_Validating(object sender, CancelEventArgs e)
         {
             var cpf = txtCpf.Text;
@@ -87,7 +103,12 @@ namespace AppModelo.View.Windows.Cadastros
         {
 
         }
-
+        
+        /// <summary>
+        /// Ao clicar nesse botão ira efetuar o cadastro do funcionario no banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             {
@@ -119,14 +140,24 @@ namespace AppModelo.View.Windows.Cadastros
 
             }
         }
-
+        
+        /// <summary>
+        /// seleciona a Nacionalidade
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNacionalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
             string Index = cmbNacionalidade.Text;
             //MessageBox.Show(Index);
         }
-
+       
+        /// <summary>
+        /// seleciona a Naturalidade
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
@@ -135,6 +166,10 @@ namespace AppModelo.View.Windows.Cadastros
 
         }
 
+        /// <summary>
+        /// Ao clicar em salvar todos os campos serão limpados
+        /// </summary>
+        /// <param name="ctrl"></param>
         public static void limparDados(Control ctrl)
         {
             foreach (Control c in ctrl.Controls)
@@ -198,7 +233,12 @@ namespace AppModelo.View.Windows.Cadastros
                 }
             }
         }
-
+        
+        /// <summary>
+        /// Ao clicar em salvar ira aparecer um botão que ao clicar abre um formulario com todos os funcionarios cadastrados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConferir_Click(object sender, EventArgs e)
         {
             var form = new frmListagemFuncionarios();

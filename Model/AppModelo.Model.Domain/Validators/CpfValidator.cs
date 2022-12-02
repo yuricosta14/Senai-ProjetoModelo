@@ -2,6 +2,9 @@
 {
     public static partial class Validadores
     {
+        /// <summary>
+        /// Responsavel por fazer a validação do cpf
+        /// </summary>
         public struct Cpf
         {
             private readonly string _value;

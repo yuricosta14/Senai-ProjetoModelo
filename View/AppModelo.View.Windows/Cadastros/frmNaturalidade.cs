@@ -6,6 +6,9 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmNaturalidade : Form
     {
+        /// <summary>
+        ///Instância da classe controller de naturalidade
+        /// </summary>
         private NaturalidadeController _naturalidadecontroller = new NaturalidadeController();
     
       

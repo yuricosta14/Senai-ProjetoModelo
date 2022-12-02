@@ -6,6 +6,10 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmListagemFuncionarios : Form
     {
+
+        /// <summary>
+        ///Instância da classe controller de funcionário
+        /// </summary>
         private FuncionarioController _funcionarioController = new FuncionarioController();
 
         /// <summary>

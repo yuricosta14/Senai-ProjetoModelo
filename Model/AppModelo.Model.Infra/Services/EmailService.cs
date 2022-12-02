@@ -1,15 +1,19 @@
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Services
 {
     public class EmailService
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="email"></param>
+        /// <param name="assunto"></param>
+        /// <param name="mensagem"></param>
+        /// <returns>Retorna um email que foi solicitado para o usuário</returns>
         public bool EnviarEmail(string nome, string email, string assunto, string mensagem)
         {
             try
